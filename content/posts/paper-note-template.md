@@ -8,34 +8,6 @@ tags = ["论文笔记", "模板", "科研"]
 categories = ["工具"]
 +++
 
-这个模板是基于几类常见且广泛使用的论文阅读结构整理出来的：
-
-- Tufts 的课程总结模板强调先回答“论文解决什么问题”，再写“最喜欢什么、不喜欢什么、还想问什么”。  
-- Carnegie Mellon 的课程资源强调按论文结构拆读，重点抓住研究问题、方法、结果和各部分的信息功能。  
-- 另一类计算机科学论文阅读指南则会特别强调：快速判断问题是否清晰、方法是否清晰、结果是否充分、相关工作和未来工作是否扎实。
-
-在这些来源基础上，我把模板压缩成一个更适合博客长期维护的版本：既能当阅读笔记，也能当后续写 related work 或做研究对比时的素材库。
-
-参考来源：
-
-- Tufts: https://www.cs.tufts.edu/comp/118-2022f/summaries.html
-- CMU OLI: https://oli.cmu.edu/courses/reading-to-write-research-articles-across-the-disciplines/
-- CMU METALS: https://metals.hcii.cmu.edu/student-resources/new-article/
-- CMU CS 阅读建议: https://www.cs.cmu.edu/~15712/papers/howtoreadacspaper.pdf
-
-## 推荐使用方式
-
-如果你想直接生成一篇新的论文笔记，建议用这个命令：
-
-```bash
-hugo new --kind paper-note content/posts/my-paper-note.md
-```
-
-然后把里面的占位内容替换掉即可。
-
-## 模板正文
-
-```md
 > 建议先用 3 到 5 句话写完这篇论文的核心信息：研究问题、方法、结果、价值。
 
 ## 1. 基本信息
@@ -134,15 +106,3 @@ hugo new --kind paper-note content/posts/my-paper-note.md
 - [ ] 是否需要补读引用文献
 - [ ] 是否需要加入综述 / related work
 - [ ] 是否需要记录到自己的研究路线图
-```
-
-## 为什么这个模板适合博客维护
-
-- 它不是只做“摘要”，而是把“批判性阅读”也写进去。
-- 它兼顾“单篇阅读”和“以后做综述时回看”两个场景。
-- 它保留了“对我自己的启发”这一栏，这对长期研究记录最有用。
-
-如果你之后希望我继续细化，我还可以再给你补两种变体：
-
-- 偏“速读”的短模板：适合一天读很多篇时快速记录
-- 偏“精读”的长模板：适合准备复现或写 related work 时使用
