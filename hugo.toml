@@ -1,7 +1,7 @@
 # Update this after you create the GitHub Pages repository.
 # For a user site, use: https://sqs17.github.io/
 # For a project site, use: https://sqs17.github.io/<repo-name>/
-baseURL = "https://example.github.io/"
+baseURL = "https://sqs17.github.io/"
 languageCode = "zh-cn"
 title = "SQS 的博客"
 theme = "PaperMod"

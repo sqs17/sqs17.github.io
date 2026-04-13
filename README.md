@@ -30,19 +30,19 @@ hugo new content/posts/my-post.md
 
 推荐使用用户站点，这样地址最干净：
 
-1. 在 GitHub 新建仓库，仓库名使用 `<你的用户名>.github.io`
+1. 在 GitHub 新建仓库，仓库名使用 `sqs17.github.io`
 2. 把当前项目推到这个仓库
 3. 在仓库 `Settings > Pages` 中把 `Source` 改成 `GitHub Actions`
 4. 等待 `.github/workflows/hugo.yaml` 跑完
-5. 站点地址会是 `https://<你的用户名>.github.io/`
+5. 站点地址会是 `https://sqs17.github.io/`
 
 如果你想用项目站点，仓库名可以任意，但需要把 `hugo.toml` 里的：
 
-- `baseURL = "https://example.github.io/"`
+- `baseURL = "https://sqs17.github.io/"`
 
 改成：
 
-- `https://<你的用户名>.github.io/<仓库名>/`
+- `https://sqs17.github.io/<仓库名>/`
 
 ## 需要你自己修改的地方
 
