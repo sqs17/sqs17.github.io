@@ -1,0 +1,100 @@
+# Update this after you create the GitHub Pages repository.
+# For a user site, use: https://sqs17.github.io/
+# For a project site, use: https://sqs17.github.io/<repo-name>/
+baseURL = "https://example.github.io/"
+languageCode = "zh-cn"
+title = "SQS 的博客"
+theme = "PaperMod"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[pagination]
+  pagerSize = 8
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  env = "production"
+  description = "记录研究、代码和日常思考。"
+  keywords = ["博客", "Hugo", "GitHub Pages", "中文写作"]
+  author = "SQS"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  UseHugoToc = true
+  mainSections = ["posts"]
+
+  [params.assets]
+    disableHLJS = true
+
+  [params.label]
+    text = "SQS Blog"
+
+  [params.homeInfoParams]
+    Title = "一个安静、清爽、适合长期写作的个人博客"
+    Content = "这里放研究笔记、技术记录、课程整理和偶尔的生活感想。使用 Markdown 写作，部署在 GitHub Pages，维护成本尽量低。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/sqs17"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+    style = "github"

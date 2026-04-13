@@ -1,0 +1,96 @@
+:root {
+  --main-width: 780px;
+  --content-gap: 28px;
+  --theme: #fbfaf6;
+  --entry: #fffdfa;
+  --primary: #1d1d1f;
+  --secondary: #5c5c62;
+  --tertiary: #8b8b93;
+  --content: #222228;
+  --code-bg: #f3efe7;
+  --border: #ece6db;
+}
+
+.dark {
+  --theme: #17181b;
+  --entry: #202227;
+  --primary: #f2f0ea;
+  --secondary: #bab2a8;
+  --tertiary: #8d877f;
+  --content: #ebe6de;
+  --code-bg: #2a2d33;
+  --border: #343840;
+}
+
+body {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong",
+    "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN",
+    "PingFang SC", serif;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+.logo a,
+.post-title,
+.first-entry .entry-header h1,
+.home-info .entry-header h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
+    "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.home-info,
+.post-entry,
+.post-single,
+.archive-entry,
+.terms-tags a {
+  border-radius: 18px;
+}
+
+.home-info {
+  background: linear-gradient(135deg, rgba(205, 194, 174, 0.18), transparent 65%);
+}
+
+.post-content p,
+.post-content li {
+  font-size: 1.02rem;
+}
+
+.post-content blockquote {
+  border-inline-start: 4px solid #b88b4a;
+  background: rgba(184, 139, 74, 0.08);
+}
+
+.post-content code {
+  border-radius: 6px;
+}
+
+.post-content pre code {
+  font-size: 0.92rem;
+}
+
+.nav,
+.footer,
+.post-meta,
+.archive-meta,
+.entry-footer {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
+    "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    line-height: 1.82;
+  }
+
+  .post-content p,
+  .post-content li {
+    font-size: 1rem;
+  }
+}
