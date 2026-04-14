@@ -1,11 +1,19 @@
+@font-face {
+  font-family: "TsangerHeading";
+  src: url("/fonts/%E4%BB%93%E8%80%B3%E4%BB%8A%E6%A5%B705-W04.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --main-width: 780px;
   --content-gap: 28px;
   --font-body: "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong",
     "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN",
     "PingFang SC", serif;
-  --font-display: "仓耳今楷05-W04", "TsangerJinKai05-W04", "STKaiti", "KaiTi",
-    serif;
+  --font-display: "TsangerHeading", "STKaiti", "KaiTi", serif;
   --font-ui: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
     "Source Han Sans SC", "Microsoft YaHei", sans-serif;
   --font-code: "JetBrains Mono", "JetBrainsMono Nerd Font", "SFMono-Regular",
