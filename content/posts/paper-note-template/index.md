@@ -9,25 +9,21 @@ categories = ["工具"]
 +++
 
 <div class="paper-hero">
-  <figure class="paper-hero-figure">
-    <img src="images/architecture-overview.svg" alt="论文整体架构图或方法流程图">
-    <figcaption>把论文最关键的结构图放在这里。优先选主图、总览图，或者你自己重绘的流程图。</figcaption>
-  </figure>
+  <div class="paper-image-placeholder">[ 在这里插入论文架构图，占位路径：images/architecture-overview.png ]</div>
   <div class="paper-highlight">
-    一句话导读：这篇论文围绕什么核心问题展开，最关键的方法设计是什么，最终最值得记住的结论又是什么。
+    <strong>一句话导读</strong>
+    <p>这篇论文围绕什么核心问题展开，最关键的方法设计是什么，最终最值得记住的结论又是什么。</p>
   </div>
 </div>
 
 ## 一、基本信息
 
-<div class="paper-meta-grid">
-  <div><span>题目</span><p>在这里填写论文全称</p></div>
-  <div><span>年份</span><p>2026</p></div>
-  <div><span>会议 / 期刊</span><p>CVPR / ICCV / NeurIPS / ACL / TPAMI ...</p></div>
-  <div><span>机构</span><p>第一署名单位</p></div>
-  <div><span>论文链接</span><p><a href="https://arxiv.org/">https://arxiv.org/</a></p></div>
-  <div><span>代码链接</span><p><a href="https://github.com/">https://github.com/</a></p></div>
-</div>
+- 题目：在这里填写论文全称
+- 年份：2026
+- 会议 / 期刊：CVPR / ICCV / NeurIPS / ACL / TPAMI ...
+- 机构（第一署名单位）：第一署名单位
+- 论文链接：https://arxiv.org/
+- 代码链接：https://github.com/
 
 ## 二、Motivation
 
@@ -89,27 +85,3 @@ categories = ["工具"]
 - 主要结果：
 - 围绕研究问题，还应该关注哪些补充结果：
 - 消融实验 / 可视化 / 鲁棒性实验分别说明了什么：
-
-## 五、我的判断
-
-### 5.1 贡献总结
-
-- 这篇论文最核心的贡献是什么。
-- 哪个技术点最值得记住。
-
-### 5.2 局限与问题
-
-- 可能的局限：
-- 还未回答的问题：
-
-### 5.3 我的启发
-
-- 对自己的研究或写作有什么启发。
-- 是否值得后续复现或继续跟进。
-
-## 六、后续行动
-
-- [ ] 复现核心模块
-- [ ] 补读引用文献
-- [ ] 纳入 related work
-- [ ] 整理到长期研究路线图

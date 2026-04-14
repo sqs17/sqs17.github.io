@@ -9,25 +9,21 @@ categories = ["论文笔记"]
 +++
 
 <div class="paper-hero">
-  <figure class="paper-hero-figure">
-    <img src="images/architecture-overview.png" alt="论文整体架构图或方法流程图">
-    <figcaption>建议放论文主图、总体流程图，或你自己重绘的结构图。</figcaption>
-  </figure>
+  <div class="paper-image-placeholder">[ 在这里插入论文架构图，占位路径：images/architecture-overview.png ]</div>
   <div class="paper-highlight">
-    一句话导读：这篇论文解决了什么问题，靠什么方法推进，最值得记住的结论是什么。
+    <strong>一句话导读</strong>
+    <p>这篇论文解决了什么问题，靠什么方法推进，最值得记住的结论是什么。</p>
   </div>
 </div>
 
 ## 一、基本信息
 
-<div class="paper-meta-grid">
-  <div><span>题目</span><p></p></div>
-  <div><span>年份</span><p></p></div>
-  <div><span>会议 / 期刊</span><p></p></div>
-  <div><span>机构</span><p>第一署名单位</p></div>
-  <div><span>论文链接</span><p><a href=""></a></p></div>
-  <div><span>代码链接</span><p><a href=""></a></p></div>
-</div>
+- 题目：
+- 年份：
+- 会议 / 期刊：
+- 机构（第一署名单位）：
+- 论文链接：
+- 代码链接：
 
 ## 二、Motivation
 
@@ -84,27 +80,3 @@ categories = ["论文笔记"]
 - 主要结果：
 - 围绕研究问题，还应额外关注哪些结果：
 - 消融 / 可视化 / 鲁棒性实验说明了什么：
-
-## 五、我的判断
-
-### 5.1 贡献总结
-
-- 这篇论文最主要的贡献是什么：
-- 哪个部分最值得记住：
-
-### 5.2 局限与问题
-
-- 可能的局限：
-- 还有哪些没有回答的问题：
-
-### 5.3 我的启发
-
-- 对自己的研究 / 复现 / 写作有什么启发：
-- 后续是否要加入长期阅读清单：
-
-## 六、后续行动
-
-- [ ] 是否需要复现
-- [ ] 是否需要补读引用文献
-- [ ] 是否需要加入综述 / related work
-- [ ] 是否需要记录到自己的研究路线图
