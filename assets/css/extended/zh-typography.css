@@ -1,6 +1,15 @@
 :root {
   --main-width: 780px;
   --content-gap: 28px;
+  --font-body: "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong",
+    "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN",
+    "PingFang SC", serif;
+  --font-display: "TsangerJinKai02-W04", "TsangerJinKai02-W03",
+    "TsangerJinKai02-W02", "STKaiti", "KaiTi", serif;
+  --font-ui: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
+    "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  --font-code: "JetBrains Mono", "JetBrainsMono Nerd Font", "SFMono-Regular",
+    Consolas, "Liberation Mono", Menlo, monospace;
   --theme: #fbfaf6;
   --entry: #fffdfa;
   --primary: #1d1d1f;
@@ -23,9 +32,7 @@
 }
 
 body {
-  font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong",
-    "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN",
-    "PingFang SC", serif;
+  font-family: var(--font-body);
   line-height: 1.9;
   letter-spacing: 0.01em;
 }
@@ -40,8 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
-    "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-display);
   letter-spacing: 0.01em;
 }
 
@@ -98,13 +104,19 @@ h6 {
   font-size: 0.92rem;
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-code);
+}
+
 .nav,
 .footer,
 .post-meta,
 .archive-meta,
 .entry-footer {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
-    "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-ui);
 }
 
 @media (max-width: 768px) {
