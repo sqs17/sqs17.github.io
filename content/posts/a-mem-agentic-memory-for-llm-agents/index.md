@@ -1,6 +1,6 @@
 +++
 title = "A-MEM: Agentic Memory for LLM Agents"
-date = 2026-04-14T14:40:00+08:00
+date = 2026-04-14T14:30:00+08:00
 draft = false
 slug = "a-mem-agentic-memory-for-llm-agents"
 summary = "A-MEM 将长期记忆建成可自组织、可链接、可演化的 note network，用代理式记忆替代静态写入与检索流程。"
