@@ -3,6 +3,15 @@
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    {{- $tagTerms := ($.GetTerms $tags) }}
+    {{- if $tagTerms }}
+    <ul class="post-tags post-tags-top">
+      {{- range $tagTerms }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
     <h1 class="post-title entry-hint-parent">
       {{ .Title }}
       {{- if .Draft }}
@@ -43,12 +52,6 @@
   {{- end }}
 
   <footer class="post-footer">
-    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
-    <ul class="post-tags">
-      {{- range ($.GetTerms $tags) }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-      {{- end }}
-    </ul>
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
