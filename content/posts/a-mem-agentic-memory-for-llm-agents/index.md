@@ -4,15 +4,15 @@ date = 2026-04-14T14:30:00+08:00
 draft = false
 slug = "a-mem-agentic-memory-for-llm-agents"
 summary = "A-MEM 将长期记忆建成可自组织、可链接、可演化的 note network，用代理式记忆替代静态写入与检索流程。"
-tags = ["论文笔记", "LLM Agent", "Memory", "Agentic AI"]
+tags = ["LLM-based Agent", "Memory", "Graph"]
 categories = ["论文笔记"]
 +++
 
 <div class="paper-hero">
   <img src="images/architecture-overview.png" alt="A-MEM 整体框架图">
   <div class="paper-highlight">
-    <strong>一句话总结</strong>
-    <p>A-MEM 把 LLM Agent 的长期记忆从静态存取模块改造成可自动建 note、自动连边、自动演化的记忆网络，因此在长程对话和多跳推理上明显强于传统 memory baselines。</p>
+    <strong>Highlight</strong>
+    <p>核心的记忆机制就是记忆存储的设计以及记忆检索两个方面。记忆存储结构基于图，不过是基于笔记本的概念创建记忆节点，然后link之前的记忆节点，记忆基于link的记忆节点重新更新对应的内容进行进化。本文的原发复现过程中，这里的是将所有的对话历史一次性构建记忆库，一次性构建记忆库内容重视逐步构建记忆笔记的，涵盖一个记忆进化过程。</p>
   </div>
 </div>
 
@@ -20,19 +20,18 @@ categories = ["论文笔记"]
 
 - 题目：A-MEM: Agentic Memory for LLM Agents
 - 年份：2025
-- 会议 / 期刊：arXiv preprint
-- 机构（第一署名单位）：Rutgers University
-- 论文链接：https://arxiv.org/abs/2502.12110
-- 代码链接：https://github.com/WujiangXu/AgenticMemory
-- 系统代码：https://github.com/WujiangXu/A-mem-sys
+- 会议 / 期刊：NeurIPS
+- 单位：Rutgers University
+- 论文链接：[https://arxiv.org/abs/2502.12110](https://arxiv.org/abs/2502.12110)
+- 代码链接：[https://github.com/WujiangXu/AgenticMemory](https://github.com/WujiangXu/AgenticMemory)
 
 ## 二、Motivation
 
 ### 2.1 任务定义
 
 - 任务目标：为 LLM Agent 设计一个支持长期交互的通用记忆系统。
-- 任务输入：Agent 与环境的历史交互内容，以及当前查询或当前轮交互。
-- 任务输出：能够被后续推理调用的相关记忆，以及随新经验持续更新的记忆结构。
+- 任务输入：Agent 与环境的历史交互内容，以及当前查询。
+- 任务输出：基于当前查询和相关历史内容生成的当轮回答。
 
 ### 2.2 研究问题
 
@@ -83,10 +82,15 @@ categories = ["论文笔记"]
 - 主指标：F1、BLEU-1
 - 补充指标：ROUGE-L、ROUGE-2、METEOR、SBERT Similarity
 
-### 4.4 实验问题与结果
+### 4.4 实验目的与结论
 
-- 主要结果：A-MEM 在非 GPT 基础模型上持续优于所有基线；在 GPT 系模型上，虽然 Open Domain 和 Adversarial 某些项基线也很强，但 A-MEM 在 Multi-Hop 复杂推理上优势最明显。
-- 典型结果 1：在 DialSim 上，A-MEM 的 F1 为 3.45，高于 LoCoMo 的 2.55，也显著高于 MemGPT 的 1.18。
-- 典型结果 2：论文补充实验中，GPT-4o-mini + A-MEM 在 Multi-Hop 上的 ROUGE-L 达到 44.27，而 LoCoMo 为 18.09，基本是翻倍优势。
-- 消融结果：完整模型在所有类别都优于去掉 Link Generation 和 Memory Evolution 的版本；以 Multi-Hop F1 为例，完整模型 27.02，去掉 ME 后 21.35，同时去掉 LG 和 ME 后只有 9.65。
-- 效率结果：A-MEM 单次 memory operation 约使用 1,200 到 2,500 token，相比 LoCoMo 和 MemGPT 约 16,900 token，减少约 85% 到 93%；使用 GPT-4o-mini 时平均处理约 5.4 秒，本地 Llama 3.2 1B 约 1.1 秒。
+- 实验 1：整体效果对比。目的是验证 A-MEM 作为长期记忆系统，是否能在完整任务上稳定优于现有方法。结论是 A-MEM 在 LoCoMo 和 DialSim 上整体表现更强，尤其在 Multi-Hop 这类需要跨记忆推理的任务上优势最明显。
+- 实验 2：不同模型下的泛化效果。目的是看 A-MEM 是否只对某一类基础模型有效，还是能在 GPT 系模型和开源模型上都带来收益。结论是它在不同底座下都能提升表现，说明方法本身具有较好的通用性，而不是仅依赖特定模型能力。
+- 实验 3：组件消融。目的是验证 Link Generation 和 Memory Evolution 这两个核心组件是否真的必要。结论是去掉任一组件后性能都会下降，同时去掉两者下降更明显，说明“建立链接”和“记忆演化”共同支撑了系统效果。
+- 实验 4：效率评估。目的是判断这种代理式记忆机制是否在效果提升之外还具备实际可用性。结论是 A-MEM 在 memory operation 上显著减少 token 开销，并保持较快处理速度，说明它不仅更有效，也更节省推理成本。
+
+## 五、Others
+
+```
+文章中的评估对于对抗性问题可能存在一定的问题，其次这里的第五类的策略基于的做法是基于选择题实现的，并且本身的评估在这里也存在问题，正确答案应该是未提及到，到时候注意一下这个数据集
+```
