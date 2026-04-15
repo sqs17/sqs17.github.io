@@ -13,7 +13,10 @@
   --font-body: "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong",
     "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN",
     "PingFang SC", serif;
-  --font-display: "TsangerHeading", "STKaiti", "KaiTi", serif;
+  --font-display-latin: "Iowan Old Style", "Palatino Linotype",
+    "Book Antiqua", Georgia, serif;
+  --font-display-cjk: "TsangerHeading", "STKaiti", "KaiTi", serif;
+  --font-display: var(--font-display-latin), var(--font-display-cjk);
   --font-ui: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
     "Source Han Sans SC", "Microsoft YaHei", sans-serif;
   --font-code: "JetBrains Mono", "JetBrainsMono Nerd Font", "SFMono-Regular",
