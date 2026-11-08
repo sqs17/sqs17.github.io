@@ -1,5 +1,5 @@
 +++
-title = "科研经验与思考"
+title = "科研初探随笔"
 date = 2026-11-07T19:00:00+08:00
 draft = false
 slug = "research-reflections"
